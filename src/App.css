@@ -1,38 +1,73 @@
-.App {
+/* Contêiner do formulário */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #4CAF50;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilo dos campos de entrada */
+.form-group {
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.input-field:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Estilo do botão de submit */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Estilo das mensagens de erro e sucesso */
+.error-message {
+  color: #ff0000;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #4CAF50;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
 }

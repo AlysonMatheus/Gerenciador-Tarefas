@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/tarefas", 
+  baseURL: "/Tarefa", 
 });
 
 export default api;

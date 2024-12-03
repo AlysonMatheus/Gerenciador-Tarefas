@@ -1,7 +1,7 @@
-import axios from "axios"npm install axios;
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/tarefas", // Usando a mesma origem
+  baseURL: "/tarefas", 
 });
 
 export default api;

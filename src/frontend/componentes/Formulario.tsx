@@ -4,8 +4,8 @@ import api from "../servicos/api";
 const FormularioTarefa: React.FC = () => {
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
-  const [error, setError] = useState(""); 
-  const [success, setSuccess] = useState(false);
+  const [error] = useState(""); 
+  const [success] = useState(false);
 
   const adicionarTarefa = async () => {
     try {
@@ -16,7 +16,7 @@ const FormularioTarefa: React.FC = () => {
       setDescricao("");
     } catch (error) {
       console.error("Erro ao adicionar tarefa:", error);
-      alert("Erro ao adicionar tarefa. Tente novamente mais tarde.");
+     
     }
   };
 

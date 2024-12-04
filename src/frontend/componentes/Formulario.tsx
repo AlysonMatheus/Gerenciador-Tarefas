@@ -4,22 +4,19 @@ import api from "../servicos/api";
 const FormularioTarefa: React.FC = () => {
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
-  const [error, setError] = useState(""); // Adicionando um estado de erro
-  const [success, setSuccess] = useState(false); // Estado para sucesso
+  const [error, setError] = useState(""); 
+  const [success, setSuccess] = useState(false);
 
   const adicionarTarefa = async () => {
-    if (!titulo || !descricao) {
-      setError("Por favor, preencha todos os campos!"); // Validação simples
-      return;
-    }
     try {
-      await api.post("/tarefa", { titulo, descricao });
-      setSuccess(true);
-      setError(""); // Limpa a mensagem de erro
-      setTitulo(""); // Limpa o campo de título
-      setDescricao(""); // Limpa o campo de descrição
-    } catch (err) {
-      setError("Erro ao adicionar tarefa. Tente novamente mais tarde."); // Mensagem de erro
+      console.log("Enviando dados:", { titulo, descricao });
+      const response = await api.post("/", { titulo, descricao });
+      console.log("Resposta do servidor:", response.data);
+      setTitulo("");
+      setDescricao("");
+    } catch (error) {
+      console.error("Erro ao adicionar tarefa:", error);
+      alert("Erro ao adicionar tarefa. Tente novamente mais tarde.");
     }
   };
 
